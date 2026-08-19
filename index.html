@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- ── NAV ───────────────────────────────────────────────────── -->
+    <nav>
+      <a href="#hero" class="logo">Ajin<span>.</span>Dev</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-cta" onclick="smoothTo('contact')">Hire Me</button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- Mobile menu -->
+    <nav class="mobile-menu" id="mobileMenu">
+      <a href="#about" onclick="closeMobile()">About</a>
+      <a href="#skills" onclick="closeMobile()">Skills</a>
+      <a href="#projects" onclick="closeMobile()">Projects</a>
+      <a href="#contact" onclick="closeMobile()">Contact</a>
+    </nav>
+
+    <!-- ── HERO ──────────────────────────────────────────────────── -->
+    <section id="hero">
+      <div class="hero-grid-bg"></div>
+      <div class="hero-wrapper">
+        <div class="hero-content">
+          <div class="status-badge">
+            <span class="status-dot"></span> Available for work
+          </div>
+          <div class="hero-eyebrow">Front-End Developer | Graphic Designer</div> 
+          <h1>
+            Redentor<br />
+            <span class="accent">Cariaga</span><br />
+            <span class="outline">Remoblas</span>
+          </h1>
+          <p class="hero-desc">
+           I create responsive front-end experiences, impactful graphic designs, and dependable technical support 
+           solutions—combining creativity with technology to deliver seamless user experiences.
+          </p>
+          <div class="hero-btns">
+            <button class="btn-primary" onclick="smoothTo('projects')">
+              View My Work
+            </button>
+            <button class="btn-secondary" onclick="smoothTo('contact')">
+              Get In Touch
+            </button>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="carousel-container" id="carouselContainer">
+            <div class="carousel-slide" onclick="flipCard(this)">
+              <img src="images/main.jpg" alt="Portfolio Main Image" />
+            </div>
+            <div class="carousel-slide" onclick="flipCard(this)">
+              <img src="images/me.jpg" alt="Portfolio Me Image" />
+            </div>
+            <div class="carousel-slide" onclick="flipCard(this)">
+              <img src="images/red.png" alt="Portfolio Me Image" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-hint">Scroll</div>
+
+      <!-- From Uiverse.io by mrhyddenn -->
+    </section>
+
+    <!-- ── ABOUT ─────────────────────────────────────────────────── -->
+    <section id="about">
+      <div class="section-label">01 — About Me</div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+       <h2>Designing, developing,<br /><em>and supporting</em><br />digital solutions.</h2>
+         <p>
+  I'm a passionate Front-End Developer, Graphic Designer, 
+  and Technical Support professional dedicated to creating responsive websites, 
+  engaging visual designs, and reliable technology solutions. I enjoy combining 
+  creativity with technical expertise to build user-friendly digital experiences.
+</p>
+
+<p>
+  Beyond development and design, I continuously expand my 
+  skills by exploring emerging technologies, refining my creative process, 
+  and staying current with modern design trends and web standards. I'm always eager
+   to learn, solve challenges, and deliver quality results.
+</p>
+         <div class="about-chips">
+  <span class="chip">Front-End Development</span>
+  <span class="chip">Graphic Design</span>
+  <span class="chip">Technical Support</span>
+  <span class="chip">Responsive Design</span>
+  <span class="chip">Problem Solver</span>
+</div>
+        </div>
+        <!-- <div class="about-stats reveal" style="transition-delay: 0.15s">
+          <div class="stat-card">
+            <div class="stat-num" data-count="3">0</div>
+            <div class="stat-label">Years experience</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" data-count="20">0</div>
+            <div class="stat-label">Projects shipped</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" data-count="15">0</div>
+            <div class="stat-label">Happy clients</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">∞</div>
+            <div class="stat-label">Lines of code</div>
+          </div>
+        </div>
+      </div> -->
+    </section>
+
+    <!-- ── SKILLS ────────────────────────────────────────────────── -->
+    <section id="skills">
+      <div class="section-label">02 — Skills</div>
+      <div class="skills-grid">
+        <div class="skill-card reveal">
+          <span class="skill-icon">&lt;/&gt;</span>
+          <h3>Core Languages</h3>
+          <p>The foundation of everything I build.</p>
+          <div class="skill-tags">
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">PHP</span>
+          </div>
+        </div>
+        <div class="skill-card reveal" style="transition-delay: 0.08s">
+          <span class="skill-icon">&#9883;</span>
+          <h3>Frameworks & Libraries</h3>
+          <p>Modern tools for modern UIs.</p>
+          <div class="skill-tags">
+            <span class="tag">React</span>
+            <span class="tag">Next.js</span>
+            <!-- <span class="tag">Vue</span> -->
+            <span class="tag">Tailwind CSS</span>
+          </div>
+        </div>
+        <div class="skill-card reveal" style="transition-delay: 0.16s">
+          <span class="skill-icon">&#11041;</span>
+          <h3>Back-End Basics</h3>
+          <p>Enough to be dangerous.</p>
+          <div class="skill-tags">
+            <span class="tag">Node.js</span>
+            <!-- <span class="tag">REST APIs</span> -->
+            <span class="tag">Firebase</span>
+            <span class="tag">MySQL</span>
+          </div>
+        </div>
+        <div class="skill-card reveal" style="transition-delay: 0.24s">
+          <span class="skill-icon">&#9998;</span>
+          <h3>Creative & Support</h3>
+          <p>Visual content and hands-on problem solving.</p>
+          <div class="skill-tags">
+            <span class="tag">Graphic Design</span>
+            <span class="tag">Video Editing</span>
+            <span class="tag">Technical Support</span>
+            <span class="tag">Adobe Creative Suite</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PROJECTS ───────────────────────────────────────────────── -->
+    <section id="projects">
+   <div class="projects-header">
+        <div class="section-label">03 — Projects</div>
+      </div>
+
+<!-- // GRAPHIC DESIGN CATEGORY -->
+
+      <div class="projects-category">
+        <h3 class="projects-category-title reveal">Graphic Design</h3>
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="project-gallery">
+              <img class="project-main-image" src="images/f1/DESIGN01.png" alt="Brand identity project preview" />
+              <div class="project-thumbs">
+                <button class="project-thumb-btn active" data-src="images/f1/FINAL.png" aria-label="View preview 1">
+                  <img src="images/f1/FINAL.png" alt="Preview 1" />
+                </button>
+                <button class="project-thumb-btn" data-src="images/f1/FINALRES.jpg" aria-label="View preview 2">
+                  <img src="images/f1/FINALRES.jpg" alt="Preview 2" />
+                </button>
+                <button class="project-thumb-btn" data-src="images/f1/sample4.png" aria-label="View preview 3">
+                  <img src="images/f1/sample4.png" alt="Preview 3" />
+                </button>
+                
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-num">Design — 01</div>
+              <h3>Fromula 1 Poster</h3>
+              <p>
+                Creative Formula 1 poster designs featuring legendary drivers, striking visuals, and racing-inspired layouts.
+              </p>
+              <div class="project-footer">
+                <div class="project-stack">
+                  <span class="tag">Photoshop</span>
+                  <span class="tag">Figma</span>
+                  
+                </div>
+                <button class="project-link" type="button">View</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-gallery">
+              <img class="project-main-image" src="images/f1/DESIGN02.png" alt="Marketing collateral preview" />
+              <div class="project-thumbs">
+                <button class="project-thumb-btn active" data-src="images/f1/DESIGN02main.png" aria-label="View preview 1">
+                  <img src="images/f1/DESIGN02main.png" alt="Preview 1" />
+                </button>
+                <button class="project-thumb-btn" data-src="images/f1/HAMILTON_FINAL.jpg" aria-label="View preview 2">
+                  <img src="images/f1/HAMILTON_FINAL.jpg" alt="Preview 2" />
+                </button>
+                <button class="project-thumb-btn" data-src="images/f1/LECLERC FINAL.jpg" aria-label="View preview 3">
+                  <img src="images/f1/LECLERC FINAL.jpg" alt="Preview 3" />
+                </button>
+                <button class="project-thumb-btn" data-src="images/f1/MAX FINAL.jpg" aria-label="View preview 3">
+                  <img src="images/f1/MAX FINAL.jpg" alt="Preview 3" />
+                </button>
+                <button class="project-thumb-btn" data-src="images/f1/HADJAR FINAL.jpg" aria-label="View preview 3">
+                  <img src="images/f1/HADJAR FINAL.jpg" alt="Preview 3" />
+                </button>
+                <button class="project-thumb-btn" data-src="images/f1/KIMIFINAL.jpg" aria-label="View preview 3">
+                  <img src="images/f1/KIMIFINAL.jpg" alt="Preview 3" />
+                </button>
+                <button class="project-thumb-btn" data-src="images/f1/GEORGEFINAL.jpg" aria-label="View preview 3">
+                  <img src="images/f1/GEORGEFINAL.jpg" alt="Preview 3" />
+                </button>
+                <button class="project-thumb-btn" data-src="images/f1/LANDO_RESULT.jpg" aria-label="View preview 3">
+                  <img src="images/f1/LANDO_RESULT.jpg" alt="Preview 3" />
+                </button>
+                <button class="project-thumb-btn" data-src="images/f1/OSCAR_RESULT.jpg" aria-label="View preview 3">
+                  <img src="images/f1/OSCAR_RESULT.jpg" alt="Preview 3" />
+                </button>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-num">Design — 02</div>
+              <h3>Formula 1 Team Driver Poster Collection</h3>
+              <p>
+                  A collection of visually engaging Formula 1 carousel graphics designed to help new fans discover
+                   teams, drivers, and the excitement of the sport.
+              </p>
+              <div class="project-footer">
+                <div class="project-stack">
+                  <span class="tag">Photoshop</span>
+                  <span class="tag">Figma</span>
+               
+                </div>
+                <button class="project-link" type="button">View</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-gallery">
+              <img class="project-main-image" src="images/IBL/title2.png" alt="Marketing collateral preview" />
+              <div class="project-thumbs">
+                <button class="project-thumb-btn active" data-src="images/IBL/jersey5.jfif" aria-label="View preview 1">
+                  <img src="images/IBL/jersey5.jfif" alt="Preview 1" />
+                </button>
+                <button class="project-thumb-btn active" data-src="images/IBL/jersey6.jfif" aria-label="View preview 1">
+                  <img src="images/IBL/jersey6.jfif" alt="Preview 1" />
+                </button>
+                <button class="project-thumb-btn active" data-src="images/IBL/jersey3.jfif" aria-label="View preview 1">
+                  <img src="images/IBL/jersey3.jfif" alt="Preview 1" />
+                </button>
+                <button class="project-thumb-btn active" data-src="images/IBL/jersey1.jfif" aria-label="View preview 1">
+                  <img src="images/IBL/jersey1.jfif" alt="Preview 1" />
+                </button>
+                <button class="project-thumb-btn active" data-src="images/IBL/jersey2.jfif" aria-label="View preview 1">
+                  <img src="images/IBL/jersey2.jfif" alt="Preview 1" />
+                </button>
+                <button class="project-thumb-btn active" data-src="images/IBL/jersey4.jfif" aria-label="View preview 1">
+                  <img src="images/IBL/jersey4.jfif" alt="Preview 1" />
+                </button>
+                <button class="project-thumb-btn active" data-src="images/IBL/jersey7.jfif" aria-label="View preview 1">
+                  <img src="images/IBL/jersey7.jfif" alt="Preview 1" />
+                </button>
+                <button class="project-thumb-btn active" data-src="images/IBL/jersey8.jfif" aria-label="View preview 1">
+                  <img src="images/IBL/jersey8.jfif" alt="Preview 1" />
+                </button>
+                <button class="project-thumb-btn active" data-src="images/IBL/jerysey9.jfif" aria-label="View preview 1">
+                  <img src="images/IBL/jerysey9.jfif" alt="Preview 1" />
+                </button>
+                <button class="project-thumb-btn active" data-src="images/IBL/jersey10.jfif" aria-label="View preview 1">
+                  <img src="images/IBL/jersey10.jfif" alt="Preview 1" />
+                </button>
+                <button class="project-thumb-btn active" data-src="images/IBL/jersey11.jfif" aria-label="View preview 1">
+                  <img src="images/IBL/jersey11.jfif" alt="Preview 1" />
+                </button>
+                <button class="project-thumb-btn active" data-src="images/IBL/jersey12.jfif" aria-label="View preview 1">
+                  <img src="images/IBL/jersey12.jfif" alt="Preview 1" />
+                </button>
+                <button class="project-thumb-btn active" data-src="images/IBL/jersey13.jfif" aria-label="View preview 1">
+                  <img src="images/IBL/jersey13.jfif" alt="Preview 1" />
+                </button>
+                <button class="project-thumb-btn active" data-src="images/IBL/jersey14.jfif" aria-label="View preview 1">
+                  <img src="images/IBL/jersey14.jfif" alt="Preview 1" />
+                </button>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-num">Design — 03</div>
+              <h3>IBL Sportswear Apparel Jersey Design</h3>
+              <p>
+                A visually striking sportswear apparel jersey design for a basketball team,
+                 featuring bold colors, dynamic graphics, and a modern aesthetic.
+              </p>
+              <div class="project-footer">
+                <div class="project-stack">
+                  <span class="tag">Photoshop</span>
+                      <span class="tag">Illustrator</span>
+                 
+                  
+                </div>
+                <button class="project-link" type="button">View</button>
+              </div>
+            </div>
+          </article>
+
+  <article class="project-card reveal">
+            <div class="project-gallery">
+              <img class="project-main-image" src="images/f1/KAPE.jpg" alt="Marketing collateral preview" />
+              <div class="project-thumbs">
+                <button class="project-thumb-btn active" data-src="images/f1/KAPE.jpg" aria-label="View preview 1">
+                  <img src="images/f1/KAPE.jpg" alt="Preview 1" />
+                </button>
+                
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-num">Design — 04</div>
+              <h3>Product Advertising Poster</h3>
+              <p>
+                A refreshing product campaign designed to showcase the beverage through
+                 eye-catching visuals, layered compositions, and modern marketing design.
+              </p>
+              <div class="project-footer">
+                <div class="project-stack">
+                  <span class="tag">Photoshop</span>
+                      <span class="tag">Illustrator</span>
+                 
+                  
+                </div>
+                <button class="project-link" type="button">View</button>
+              </div>
+            </div>
+          </article>
+
+
+          <article class="project-card reveal">
+            <div class="project-gallery">
+              <img class="project-main-image" src="images/f1/BBALL.png" alt="Marketing collateral preview" />
+              <div class="project-thumbs">
+                <button class="project-thumb-btn active" data-src="images/f1/BBALL.png" aria-label="View preview 1">
+                  <img src="images/f1/BBALL.png" alt="Preview 1" />
+                </button>
+               
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-num">Design — 05</div>
+              <h3>Basketball Match Layout</h3>
+              <p>
+                A dynamic basketball match layout designed to capture the energy of the game
+                 and engage fans with bold visuals and clear information.
+              </p>
+              <div class="project-footer">
+                <div class="project-stack">
+                  <span class="tag">Photoshop</span>
+                  
+                </div>
+                <button class="project-link" type="button">View</button>
+              </div>
+            </div>
+          </article>
+
+           <article class="project-card reveal">
+            <div class="project-gallery">
+              <img class="project-main-image" src="images/f1/PORTFOLIO_FINAL.jpg" alt="Marketing collateral preview" />
+              <div class="project-thumbs">
+                <button class="project-thumb-btn active" data-src="images/f1/PORTFOLIO_FINAL.jpg" aria-label="View preview 1">
+                  <img src="images/f1/PORTFOLIO_FINAL.jpg" alt="Preview 1" />
+                </button>
+               
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-num">Design — 06</div>
+              <h3>Portfolio Poster</h3>
+              <p>
+                A visually striking portfolio poster designed to showcase a collection of work
+                 and highlight the designer's skills and creativity.
+              </p>
+              <div class="project-footer">
+                <div class="project-stack">
+                  <span class="tag">Photoshop</span>
+               
+                </div>
+                <button class="project-link" type="button">View</button>
+              </div>
+            </div>
+          </article>
+
+         
+
+          <!-- <article class="project-card reveal">
+            <div class="project-gallery">
+              <img class="project-main-image" src="images/red.png" alt="Marketing collateral preview" />
+              <div class="project-thumbs">
+                <button class="project-thumb-btn active" data-src="images/red.png" aria-label="View preview 1">
+                  <img src="images/red.png" alt="Preview 1" />
+                </button>
+                <button class="project-thumb-btn" data-src="images/main.jpg" aria-label="View preview 2">
+                  <img src="images/main.jpg" alt="Preview 2" />
+                </button>
+                <button class="project-thumb-btn" data-src="images/me.jpg" aria-label="View preview 3">
+                  <img src="images/me.jpg" alt="Preview 3" />
+                </button>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-num">Design — 02</div>
+              <h3>Social Media & Print Collateral</h3>
+              <p>
+                A collection of campaign assets designed to feel cohesive across
+                print and digital touchpoints.
+              </p>
+              <div class="project-footer">
+                <div class="project-stack">
+                  <span class="tag">Canva</span>
+                  <span class="tag">InDesign</span>
+                  <span class="tag">Layout</span>
+                </div>
+                <button class="project-link" type="button">View</button>
+              </div>
+            </div>
+          </article> -->
+        </div>
+      </div>
+
+
+         
+
+      <div class="projects-category">
+        <h3 class="projects-category-title reveal">System</h3>
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="project-gallery">
+              <a
+                class="project-main-link"
+                href="https://redenremoblas.github.io/climateaction"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open project website"
+              >
+                <img class="project-main-image" src="images/CLIMATE_CHANGE.png" alt="Main project preview" />
+              </a>
+              <div class="project-thumbs">
+                <a
+                  class="project-thumb-btn active"
+                  href="https://redenremoblas.github.io/climateaction"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open project website"
+                >
+                  <img src="images/CLIMATE_CHANGE.png" alt="Preview 1" />
+                </a>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-num">System — 01</div>
+              <h3>Climate Change Website</h3>
+              <p>
+                A visually engaging climate change website that educates users about the impact of climate change and encourages 
+                action through interactive elements and informative content. 
+              </p>
+              <div class="project-footer">
+                <div class="project-stack">
+                  <span class="tag">Html</span>
+                  <span class="tag">Css</span>
+                  <span class="tag">Javascript</span>
+                </div>
+                <a
+                  class="project-link"
+                  href="https://redenremoblas.github.io/climateaction"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-gallery">
+              <img class="project-main-image" src="images/AJN.png" alt="Dashboard project preview" />
+              <div class="project-thumbs">
+                <button class="project-thumb-btn active" data-src="images/AJN.png" aria-label="View preview 1">
+                  <img src="images/AJN.png" alt="Preview 1" />
+                </button>
+              
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-num">System — 02</div>
+              <h3>FUTURE PROJECTS</h3>
+              <p>
+              FUTURE PROJECTS
+              </p>
+              <div class="project-footer">
+                <div class="project-stack">
+                  <!-- <span class="tag">Vue</span>
+                  <span class="tag">D3.js</span>
+                  <span class="tag">WebSocket</span> -->
+                </div>
+                <button class="project-link" type="button">View</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- <article class="project-card reveal">
+            <div class="project-gallery">
+              <img class="project-main-image" src="images/AJN.png" alt="Dashboard project preview" />
+              <div class="project-thumbs">
+                <button class="project-thumb-btn active" data-src="images/AJN.png" aria-label="View preview 1">
+                  <img src="images/AJN.png" alt="Preview 1" />
+                </button>
+                <button class="project-thumb-btn" data-src="images/charles.png" aria-label="View preview 2">
+                  <img src="images/charles.png" alt="Preview 2" />
+                </button>
+                <button class="project-thumb-btn" data-src="images/me.jpg" aria-label="View preview 3">
+                  <img src="images/me.jpg" alt="Preview 3" />
+                </button>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-num">System — 02</div>
+              <h3>Interactive Data Dashboard</h3>
+              <p>
+                An elegant dashboard concept that brings analytics, interaction,
+                and storytelling together in one experience.
+              </p>
+              <div class="project-footer">
+                <div class="project-stack">
+                  <span class="tag">Vue</span>
+                  <span class="tag">D3.js</span>
+                  <span class="tag">WebSocket</span>
+                </div>
+                <button class="project-link" type="button">View</button>
+              </div>
+            </div>
+          </article>
+        
+        </div>
+      </div> -->
+    </section>
+
+    <div class="project-modal" id="projectModal" aria-hidden="true">
+      <button class="project-modal-close" id="projectModalClose" type="button" aria-label="Close preview">
+        &times;
+      </button>
+      <button class="project-modal-nav prev" id="projectModalPrev" type="button" aria-label="Previous image">
+        &#8592;
+      </button>
+      <img id="projectModalImage" src="" alt="Project preview" />
+      <button class="project-modal-nav next" id="projectModalNext" type="button" aria-label="Next image">
+        &#8594;
+      </button>
+    </div>
+
+    <!-- ── CONTACT ────────────────────────────────────────────────── -->
+    <section id="contact">
+      <div class="section-label">04 — Contact</div>
+      <div class="contact-inner reveal">
+        <h2>Let's build something<br /><span>great together.</span></h2>
+        <p>
+          Whether you have a project in mind, a role to fill, or just want to
+          chat about front-end — my inbox is always open.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:remoblasredentor@gmail.com" class="contact-link">
+            <span class="icon">&#9993;</span> remoblasredentor@gmail.com
+          </a>
+          <a
+            href="https://github.com/RedenRemoblas"
+            target="_blank"
+            class="contact-link"
+          >
+            <span class="icon">&#9672;</span> GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/redentor-remoblas/"
+            target="_blank"
+            class="contact-link"
+          >
+            <span class="icon">&#9670;</span> LinkedIn
+          </a>
+          <a
+            href="assets/file/resume2.pdf"
+            target="_blank"
+            class="contact-link"
+          >
+            <span class="icon">&#9678;</span> Resume
+          </a>
+        </div>
+
+        <button
+          class="btn-primary"
+          onclick="window.location.href = 'mailto:hello@yourname.dev'"
+        >
+          Send Me a Message &rarr;
+        </button>
+      </div>
+    </section>
+
+    <!-- ── FOOTER ─────────────────────────────────────────────────── -->
+    <footer>
+      <p>&copy; 2026 &mdash; <a href="#">Redentor Remoblas</a>. All rights reserved.</p>
+      <p>Designed &amp; built with ♥</p>
+    </footer>
+
+    <!-- ── JAVASCRIPT ─────────────────────────────────────────────── -->
+    <script src="script.js"></script>
+  </body>
+</html>
